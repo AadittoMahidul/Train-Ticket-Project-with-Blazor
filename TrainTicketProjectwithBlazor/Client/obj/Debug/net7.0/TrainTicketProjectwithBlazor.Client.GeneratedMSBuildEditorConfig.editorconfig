@@ -1,0 +1,85 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = TrainTicketProjectwithBlazor.Client
+build_property.RootNamespace = TrainTicketProjectwithBlazor.Client
+build_property.ProjectDir = H:\IDB R50\1268459\Module 10\18-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Client\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = H:\IDB R50\1268459\Module 10\18-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Client
+build_property._RazorSourceGeneratorDebug = 
+
+[H:/IDB R50/1268459/Module 10/18-12-22/BlazorProject/TrainTicketProjects/TrainTicketProjectwithBlazor/Client/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/IDB R50/1268459/Module 10/18-12-22/BlazorProject/TrainTicketProjects/TrainTicketProjectwithBlazor/Client/Pages/Passengers/Create.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFzc2VuZ2Vyc1xDcmVhdGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/IDB R50/1268459/Module 10/18-12-22/BlazorProject/TrainTicketProjects/TrainTicketProjectwithBlazor/Client/Pages/Passengers/Delete.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFzc2VuZ2Vyc1xEZWxldGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/IDB R50/1268459/Module 10/18-12-22/BlazorProject/TrainTicketProjects/TrainTicketProjectwithBlazor/Client/Pages/Passengers/Edit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFzc2VuZ2Vyc1xFZGl0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/IDB R50/1268459/Module 10/18-12-22/BlazorProject/TrainTicketProjects/TrainTicketProjectwithBlazor/Client/Pages/Passengers/PassengerList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFzc2VuZ2Vyc1xQYXNzZW5nZXJMaXN0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/IDB R50/1268459/Module 10/18-12-22/BlazorProject/TrainTicketProjects/TrainTicketProjectwithBlazor/Client/Pages/Tickets/Create.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGlja2V0c1xDcmVhdGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/IDB R50/1268459/Module 10/18-12-22/BlazorProject/TrainTicketProjects/TrainTicketProjectwithBlazor/Client/Pages/Tickets/Details.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGlja2V0c1xEZXRhaWxzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/IDB R50/1268459/Module 10/18-12-22/BlazorProject/TrainTicketProjects/TrainTicketProjectwithBlazor/Client/Pages/Tickets/Edit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGlja2V0c1xFZGl0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/IDB R50/1268459/Module 10/18-12-22/BlazorProject/TrainTicketProjects/TrainTicketProjectwithBlazor/Client/Pages/Tickets/TicketList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGlja2V0c1xUaWNrZXRMaXN0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/IDB R50/1268459/Module 10/18-12-22/BlazorProject/TrainTicketProjects/TrainTicketProjectwithBlazor/Client/Pages/Trains/Create.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVHJhaW5zXENyZWF0ZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/IDB R50/1268459/Module 10/18-12-22/BlazorProject/TrainTicketProjects/TrainTicketProjectwithBlazor/Client/Pages/Trains/Delete.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVHJhaW5zXERlbGV0ZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/IDB R50/1268459/Module 10/18-12-22/BlazorProject/TrainTicketProjects/TrainTicketProjectwithBlazor/Client/Pages/Trains/Edit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVHJhaW5zXEVkaXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/IDB R50/1268459/Module 10/18-12-22/BlazorProject/TrainTicketProjects/TrainTicketProjectwithBlazor/Client/Pages/Trains/TrainList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVHJhaW5zXFRyYWluTGlzdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/IDB R50/1268459/Module 10/18-12-22/BlazorProject/TrainTicketProjects/TrainTicketProjectwithBlazor/Client/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/IDB R50/1268459/Module 10/18-12-22/BlazorProject/TrainTicketProjects/TrainTicketProjectwithBlazor/Client/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/IDB R50/1268459/Module 10/18-12-22/BlazorProject/TrainTicketProjects/TrainTicketProjectwithBlazor/Client/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/IDB R50/1268459/Module 10/18-12-22/BlazorProject/TrainTicketProjects/TrainTicketProjectwithBlazor/Client/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-5vl4cser0v

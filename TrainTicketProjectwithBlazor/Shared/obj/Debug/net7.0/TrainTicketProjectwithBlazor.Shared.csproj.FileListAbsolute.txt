@@ -1,0 +1,60 @@
+H:\IDB R50\1268459\Module 10\17-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\bin\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.deps.json
+H:\IDB R50\1268459\Module 10\17-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\bin\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.dll
+H:\IDB R50\1268459\Module 10\17-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\bin\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.pdb
+H:\IDB R50\1268459\Module 10\17-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\obj\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.csproj.AssemblyReference.cache
+H:\IDB R50\1268459\Module 10\17-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\obj\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.GeneratedMSBuildEditorConfig.editorconfig
+H:\IDB R50\1268459\Module 10\17-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\obj\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.AssemblyInfoInputs.cache
+H:\IDB R50\1268459\Module 10\17-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\obj\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.AssemblyInfo.cs
+H:\IDB R50\1268459\Module 10\17-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\obj\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.csproj.CoreCompileInputs.cache
+H:\IDB R50\1268459\Module 10\17-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\obj\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.dll
+H:\IDB R50\1268459\Module 10\17-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\obj\Debug\net7.0\refint\TrainTicketProjectwithBlazor.Shared.dll
+H:\IDB R50\1268459\Module 10\17-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\obj\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.pdb
+H:\IDB R50\1268459\Module 10\17-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\obj\Debug\net7.0\ref\TrainTicketProjectwithBlazor.Shared.dll
+F:\17-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\bin\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.deps.json
+F:\17-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\bin\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.dll
+F:\17-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\bin\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.pdb
+F:\17-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\obj\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.csproj.AssemblyReference.cache
+F:\17-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\obj\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.GeneratedMSBuildEditorConfig.editorconfig
+F:\17-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\obj\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.AssemblyInfoInputs.cache
+F:\17-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\obj\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.AssemblyInfo.cs
+F:\17-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\obj\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.csproj.CoreCompileInputs.cache
+F:\17-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\obj\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.dll
+F:\17-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\obj\Debug\net7.0\refint\TrainTicketProjectwithBlazor.Shared.dll
+F:\17-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\obj\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.pdb
+F:\17-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\obj\Debug\net7.0\ref\TrainTicketProjectwithBlazor.Shared.dll
+D:\R-50 (1268459)\Module 10\17-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\bin\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.deps.json
+D:\R-50 (1268459)\Module 10\17-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\bin\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.dll
+D:\R-50 (1268459)\Module 10\17-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\bin\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.pdb
+D:\R-50 (1268459)\Module 10\17-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\obj\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.csproj.AssemblyReference.cache
+D:\R-50 (1268459)\Module 10\17-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\obj\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\R-50 (1268459)\Module 10\17-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\obj\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.AssemblyInfoInputs.cache
+D:\R-50 (1268459)\Module 10\17-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\obj\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.AssemblyInfo.cs
+D:\R-50 (1268459)\Module 10\17-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\obj\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.csproj.CoreCompileInputs.cache
+D:\R-50 (1268459)\Module 10\17-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\obj\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.dll
+D:\R-50 (1268459)\Module 10\17-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\obj\Debug\net7.0\refint\TrainTicketProjectwithBlazor.Shared.dll
+D:\R-50 (1268459)\Module 10\17-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\obj\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.pdb
+D:\R-50 (1268459)\Module 10\17-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\obj\Debug\net7.0\ref\TrainTicketProjectwithBlazor.Shared.dll
+D:\R-50 (1268459)\Module 10\18-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\bin\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.deps.json
+D:\R-50 (1268459)\Module 10\18-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\bin\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.dll
+D:\R-50 (1268459)\Module 10\18-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\bin\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.pdb
+D:\R-50 (1268459)\Module 10\18-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\obj\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.csproj.AssemblyReference.cache
+D:\R-50 (1268459)\Module 10\18-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\obj\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\R-50 (1268459)\Module 10\18-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\obj\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.AssemblyInfoInputs.cache
+D:\R-50 (1268459)\Module 10\18-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\obj\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.AssemblyInfo.cs
+D:\R-50 (1268459)\Module 10\18-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\obj\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.csproj.CoreCompileInputs.cache
+D:\R-50 (1268459)\Module 10\18-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\obj\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.dll
+D:\R-50 (1268459)\Module 10\18-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\obj\Debug\net7.0\refint\TrainTicketProjectwithBlazor.Shared.dll
+D:\R-50 (1268459)\Module 10\18-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\obj\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.pdb
+D:\R-50 (1268459)\Module 10\18-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\obj\Debug\net7.0\ref\TrainTicketProjectwithBlazor.Shared.dll
+H:\IDB R50\1268459\Module 10\18-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\bin\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.deps.json
+H:\IDB R50\1268459\Module 10\18-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\bin\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.dll
+H:\IDB R50\1268459\Module 10\18-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\bin\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.pdb
+H:\IDB R50\1268459\Module 10\18-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\obj\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.csproj.AssemblyReference.cache
+H:\IDB R50\1268459\Module 10\18-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\obj\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.GeneratedMSBuildEditorConfig.editorconfig
+H:\IDB R50\1268459\Module 10\18-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\obj\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.AssemblyInfoInputs.cache
+H:\IDB R50\1268459\Module 10\18-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\obj\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.AssemblyInfo.cs
+H:\IDB R50\1268459\Module 10\18-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\obj\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.csproj.CoreCompileInputs.cache
+H:\IDB R50\1268459\Module 10\18-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\obj\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.dll
+H:\IDB R50\1268459\Module 10\18-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\obj\Debug\net7.0\refint\TrainTicketProjectwithBlazor.Shared.dll
+H:\IDB R50\1268459\Module 10\18-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\obj\Debug\net7.0\TrainTicketProjectwithBlazor.Shared.pdb
+H:\IDB R50\1268459\Module 10\18-12-22\BlazorProject\TrainTicketProjects\TrainTicketProjectwithBlazor\Shared\obj\Debug\net7.0\ref\TrainTicketProjectwithBlazor.Shared.dll

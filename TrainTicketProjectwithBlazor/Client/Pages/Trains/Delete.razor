@@ -1,0 +1,80 @@
+﻿@page "/Trains/Delete/{id:int}"
+
+@inject HttpClient http;
+@inject IToastService toastService
+@inject NavigationManager navManager
+@if (train is null)
+{
+    <div>Loading...</div>
+}
+else
+{
+    <h3>Delete Train</h3>
+    <div class="row">
+        <div class="col-9">
+            <h3>Are you want to sure delete?</h3>
+
+            <div class="form-group row mb-1">
+                <label for="@train.TrainName" class="col-form-label col-form-label-sm col-2 text-end">Train Name</label>
+                <div class="col-4">
+                    @train.TrainName
+                </div>
+            </div>
+            <div class="form-group row mb-1">
+                <label for="@train.Category" class="col-form-label col-form-label-sm col-2 text-end">Category</label>
+                <div class="col-4">
+                    @train.Category
+                </div>
+            </div>
+            <div class="form-group row mb-1">
+                <label for="@train.TicketPrice" class="col-form-label col-form-label-sm col-2 text-end">Ticket Price</label>
+                <div class="col-4">
+                    @train.TicketPrice.ToString("0.00");
+                </div>
+            </div>
+            <div class="form-group row mb-1">
+                <label for="@train.Picture" class="col-form-label col-form-label-sm col-2 text-end">Picture</label>
+                <div class="col-4">
+                    <img src="Uploads/@train.Picture" style="width: 100px" class="img-thumbnail" />
+                </div>
+            </div>
+            <div class="form-group row mb-1">
+                <label for="@train.IsAvailable" class="col-form-label col-form-label-sm col-2 text-end">Is Available</label>
+                <div class="col-4 pt-1">
+                    @(train.IsAvailable ? "Yes" : "No")
+
+                </div>
+            </div>
+            <div class="form-group row mb-1">
+
+                <div class="col-4 offset-2">
+                    <button @onclick="@DeleteIt" type="button" class="btn btn-danger btn-sm">Confirm delete</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <a href="/Trains/List" class="btn btn-link">Back to list</a>
+        </div>
+    </div>
+}
+
+@code {
+    [Parameter]
+    public int id { get; set; }
+    TrainEdit train = null!;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var data = await http.GetFromJsonAsync<TrainEdit>($"api/Trains/{id}");
+        if (data is not null)
+        {
+            train = data;
+        }
+    }
+    private async Task DeleteIt()
+    {
+        toastService.ShowSuccess("Data deleted successsfully", "Success");
+        var response = await this.http.DeleteAsync($"api/Trains/{id}");
+        navManager.NavigateTo("/Trains/List");
+    }
+}

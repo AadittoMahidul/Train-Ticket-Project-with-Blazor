@@ -1,0 +1,86 @@
+﻿@page "/Tickets/Details/{id:int}"
+@inject HttpClient http
+<div class="row">
+    <div class="row">
+        <h3>Ticket Details</h3>
+        @if (ticket is null)
+        {
+            <div>Loading...</div>
+        }
+        else
+        {
+            <div class="row mb-1">
+                <label class="col-2 text-end">Passenger</label>
+                <div class="col-10">
+                    @ticket.PassengerName
+                </div>
+            </div>
+            <div class="row mb-1">
+                <label class="col-2 text-end">From Station</label>
+                <div class="col-10">
+                    @ticket.FromStation
+                </div>
+            </div>
+            <div class="row mb-1">
+                <label class="col-2 text-end">To Station</label>
+                <div class="col-10">
+                    @ticket.ToStation
+                </div>
+            </div>
+            
+            <div class="row mb-1">
+                <label class="col-2 text-end">Journey date</label>
+                <div class="col-10">
+                    @ticket.JourneyDate?.ToString("yyyy-MM-dd")
+                </div>
+            </div>
+            <div class="row mb-1">
+                <label class="col-2 text-end">Category</label>
+                <div class="col-10">
+                    @ticket.Category
+                </div>
+            </div>
+            @if (ticketItems is not null)
+            {
+                <div><h4>Items</h4></div>
+                <table class="table table-bordered">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Train</th>
+                            <th>Quantity</th>
+                            <th>Sub-total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var oi in ticketItems)
+                        {
+                            <tr>
+                                <td>@oi.TrainName</td>
+                                <td>@oi.Quantity</td>
+                                <td>@((oi.TicketPrice * oi.Quantity).ToString("0.00"))</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+        }
+    </div>
+    <div class="col-12">
+        <a href="/Tickets/List" class="btn btn-link">Back to list</a>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public int id { get; set; }
+    private TicketViewDTO? ticket;
+    private TicketItemViewDTO[]? ticketItems;
+    protected override async Task OnInitializedAsync()
+    {
+        ticket = await http.GetFromJsonAsync<TicketViewDTO>($"api/Tickets/DTO/{id}");
+        if (ticket is not null)
+        {
+            ticketItems = await http.GetFromJsonAsync<TicketItemViewDTO[]>($"api/Tickets/Items/{id}");
+        }
+    }
+}

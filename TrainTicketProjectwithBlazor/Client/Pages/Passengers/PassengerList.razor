@@ -1,0 +1,55 @@
+﻿@page "/Passengers/List"
+
+<div class="row">
+    <div class="col-12">
+        <h3>Passengers List</h3>
+        <div class="d-flex justify-content-end mb-1">
+            <a href="/Passengers/Create" class="btn btn-primary btn-sm">Create</a>
+        </div>
+        @if (passengers is null)
+        {
+            <div>Loading...</div>
+        }
+        else
+        {
+            <table class="table table-bordered">
+                <thead class="table-light">
+                    <tr>
+                        <th>Passenger name</th>
+                        <th>Address</th>
+                        <th>E-mail</th>
+                        <th>...</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    @foreach (var c in passengers)
+                    {
+                        <tr>
+                            <td>@c.PassengerName</td>
+                            <td>@c.Address</td>
+                            <td>@c.Email</td>
+                            <th>
+                                <a class="btn btn-success btn-sm" href="/Passengers/edit/@c.PassengerId"><i class="bi bi-pencil">Edit</i></a>
+                                <a class="btn btn-danger btn-sm @getDisabledClass(c.CanDelete)" href="/Passengers/delete/@c.PassengerId"><i class="bi bi-trash">Del</i></a>
+                            </th>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+</div>
+@inject HttpClient http
+@code {
+    private PassengerDTO[]? passengers;
+    protected override async Task OnInitializedAsync()
+    {
+        passengers = await this.http.GetFromJsonAsync<PassengerDTO[]>("api/Passengers/DTO");
+    }
+    public string getDisabledClass(bool canDelete)
+    {
+        return canDelete ? "" : "disabled";
+    }
+
+}

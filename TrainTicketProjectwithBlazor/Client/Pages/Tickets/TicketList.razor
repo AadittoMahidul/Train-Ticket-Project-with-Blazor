@@ -1,0 +1,76 @@
+﻿@page "/Tickets/List"
+@inject HttpClient http
+@inject IToastService toastService
+
+<div class="row">
+    <div class="col-12">
+        <h3>Tickets List</h3>
+        <div class="d-flex justify-content-end mb-1">
+            <a class="btn btn-primary btn-sm" href="/Tickets/Create">Create New</a>
+        </div>
+        @if (tickets is null)
+        {
+            <div>Loading..</div>
+        }
+        else
+        {
+            <table class="table table-bordered">
+                <thead class="table-light">
+                    <tr>
+                        <th>From Station</th>
+                        <th>To Station</th>
+                        <th>Journey Date</th>
+                        <th>Category</th>
+                        <th>Items</th>
+                        <th>Ticket Value</th>
+                        <th>Details</th>
+                        <th>...</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var o in tickets)
+                    {
+                        <tr>
+                            <td>@o.FromStation</td>
+                            <td>@o.ToStation</td>
+                            <td>@o.JourneyDate?.ToString("yyyy-MM-dd")</td>
+                            <td>@o.Category</td>
+                            <td>@o.ItemCount</td>
+                            <td>@o.TicketValue.ToString("0.00")</td>
+                            <td>
+                                <a class="btn btn-link" href="/Tickets/Details/@o.TicketId">Details</a>
+                            </td>
+                            <td>
+                                <a class="btn btn-primary btn-sm" href="/Tickets/Edit/@o.TicketId"><i class="bi bi-pencil">Edit</i></a>
+                                <button @onclick="@(()=>Delete(o.TicketId))" type="button" class="btn btn-danger btn-sm">
+                                    <i class="bi bi-trash">Del</i></button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+</div>
+
+@code {
+    private TicketViewDTO[]? tickets;
+    protected override async Task OnInitializedAsync()
+    {
+        tickets = await http.GetFromJsonAsync<TicketViewDTO[]>("api/Tickets/DTO");
+    }
+    private async Task Delete(int id)
+    {
+        var response = await http.DeleteAsync("api/Tickets/{id}");
+        if (response.IsSuccessStatusCode)
+        {
+            toastService.ShowSuccess("Data deleted successfully", "Success");
+            tickets = await http.GetFromJsonAsync<TicketViewDTO[]>("api/Tickets");
+        }
+        else
+        {
+            toastService.ShowError("Failed to delete data.", "Error");
+        }
+        await Task.CompletedTask;
+    }
+}

@@ -1,0 +1,63 @@
+﻿@page "/Trains/List"
+@using TrainTicketProjectwithBlazor.Shared.DTO;
+@inject HttpClient http
+@inject IConfiguration config
+
+<h3>Trains List</h3>
+
+<div class="row">
+    <div class="col-12">
+        <div class="d-flex justify-content-end mb-1">
+            <NavLink class="btn btn-primary btn-sm" href="/Trains/Create">Create New</NavLink>
+        </div>
+        @if (trains is null)
+        {
+            <div>Loading</div>
+        }
+        else if (trains.Length == 0)
+        {
+            <div class="alert alert-warning" role="alert">
+                No train record found!
+            </div>
+        }
+        else
+        {
+            <table class="table table-bordered">
+                <thead class="table-light">
+                    <tr>
+                        <th></th>
+                        <th>Train Name</th>
+                        <th>Category</th>
+                        <th>Ticket Price</th>
+                        <th>Is Available</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var trn in trains)
+                    {
+                        <tr>
+                            <td><img style="width:40px; height:40px;" src="/Uploads/@trn.Picture" class="rounded-circle" /></td>
+                            <td>@trn.TrainName</td>
+                            <td>@trn.Category</td>
+                            <td>@trn.TicketPrice.ToString("0.00")</td>
+                            <td>@(trn.IsAvailable ? "Yes" : "No")</td>
+                            <td>
+                                <a class="btn btn-primary btn-sm" href="/Trains/Edit/@trn.TrainId"><i class="bi bi-pencil">Edit</i></a>
+                                <a class="btn btn-danger btn-sm" href="/Trains/Delete/@trn.TrainId"><i class="bi bi-trash">Del</i></a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+</div>
+
+@code {
+    private TrainDTO[]? trains;
+    protected override async Task OnInitializedAsync()
+    {
+        this.trains = await this.http.GetFromJsonAsync<TrainDTO[]>("api/Trains");
+    }
+}

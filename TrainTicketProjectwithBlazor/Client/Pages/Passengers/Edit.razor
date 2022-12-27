@@ -1,0 +1,68 @@
+﻿@page "/Passengers/Edit/{id:int}"
+@inject HttpClient http
+@inject IToastService toastService
+<div class="row">
+    <div class="col-12">
+        @if (passenger is null)
+        {
+            <div>Loading...</div>
+        }
+        else
+        {
+            <EditForm Model="@passenger" OnValidSubmit="SavePassenger">
+                <h3>Edit Passenger</h3>
+                <DataAnnotationsValidator />
+                <div class="form-group row mb-1">
+                    <label class="col-form-label col-2 text-end" for="@passenger.PassengerName">Passenger name</label>
+                    <div class="col-6">
+                        <InputText @bind-Value="passenger.PassengerName" class="form-control" />
+                        <ValidationMessage For="@(()=>passenger.PassengerName)" class="text-danger" />
+                    </div>
+                </div>
+                <div class="form-group row mb-1">
+                    <label class="col-form-label col-2 text-end" for="@passenger.Address">Address</label>
+                    <div class="col-6">
+                        <InputTextArea @bind-Value="passenger.Address" class="form-control" />
+                        <ValidationMessage For="@(()=>passenger.Address)" class="text-danger" />
+                    </div>
+                </div>
+                <div class="form-group row mb-1">
+                    <label class="col-form-label col-2 text-end" for="@passenger.Email">E-Mail</label>
+                    <div class="col-6">
+                        <InputText @bind-Value="passenger.Email" class="form-control" />
+                        <ValidationMessage For="@(()=>passenger.Email)" class="text-danger" />
+                    </div>
+                </div>
+                <div class="form-group row mb-1">
+
+                    <div class="col-4 offset-2">
+                        <button type="submit" class="btn btn-primary">Update</button>
+
+                    </div>
+                </div>
+            </EditForm>
+        }
+    </div>
+    <div class="col-12">
+        <a href="/Passengers/List" class="btn btn-link">Back to list</a>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public int id { get; set; }
+    private Passenger? passenger = default!;
+    protected override async Task OnInitializedAsync()
+    {
+        passenger = await http.GetFromJsonAsync<Passenger>($"api/Passengers/{id}");
+    }
+    private async Task SavePassenger()
+    {
+        var respose = await http.PutAsJsonAsync($"api/Passengers/{id}", passenger);
+        if (respose.IsSuccessStatusCode)
+        {
+            toastService.ShowSuccess("Data updated successsfully", "Success");
+
+        }
+    }
+}

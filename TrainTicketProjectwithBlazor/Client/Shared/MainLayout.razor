@@ -1,0 +1,14 @@
+﻿@using Blazored.Toast.Configuration;
+@inherits LayoutComponentBase
+<NavMenu />
+<div class="container">
+    @Body
+</div>
+<BlazoredToasts Position="ToastPosition.BottomRight"
+                Timeout="2">
+    <CloseButtonContent>
+        <div>
+            <span>&times;</span>
+        </div>
+    </CloseButtonContent>
+</BlazoredToasts>

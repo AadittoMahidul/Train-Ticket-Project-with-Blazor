@@ -1,0 +1,54 @@
+﻿@page "/Passengers/Create"
+@inject HttpClient http
+@inject IToastService toastService
+<div class="row">
+    <div class="col-12">
+        <EditForm Model="@passenger" OnValidSubmit="SavePassenger">
+            <h3>Create Passenger</h3>
+            <DataAnnotationsValidator />
+            <div class="form-group row mb-1">
+                <label class="col-form-label col-2 text-end" for="@passenger.PassengerName">Passenger name</label>
+                <div class="col-6">
+                    <InputText @bind-Value="passenger.PassengerName" class="form-control" />
+                    <ValidationMessage For="@(()=>passenger.PassengerName)" class="text-danger" />
+                </div>
+            </div>
+            <div class="form-group row mb-1">
+                <label class="col-form-label col-2 text-end" for="@passenger.Address">Address</label>
+                <div class="col-6">
+                    <InputTextArea @bind-Value="passenger.Address" class="form-control" />
+                    <ValidationMessage For="@(()=>passenger.Address)" class="text-danger" />
+                </div>
+            </div>
+            <div class="form-group row mb-1">
+                <label class="col-form-label col-2 text-end" for="@passenger.Email">E-Mail</label>
+                <div class="col-6">
+                    <InputText @bind-Value="passenger.Email" class="form-control" />
+                    <ValidationMessage For="@(()=>passenger.Email)" class="text-danger" />
+                </div>
+            </div>
+            <div class="form-group row mb-1">
+
+                <div class="col-4 offset-2">
+                    <button type="submit" class="btn btn-primary">Save</button>
+
+                </div>
+            </div>
+        </EditForm>
+    </div>
+    <div class="col-12">
+        <a href="/Passengers/List" class="btn btn-link">Back to list</a>
+    </div>
+</div>
+@code {
+    private Passenger passenger = new();
+    private async Task SavePassenger()
+    {
+        var respose = await http.PostAsJsonAsync("api/Passengers", passenger);
+        if (respose.IsSuccessStatusCode)
+        {
+            toastService.ShowSuccess("Data saved successsfully", "Success");
+            passenger = new();
+        }
+    }
+}

@@ -1,0 +1,135 @@
+﻿@page "/Trains/Create"
+@using System.Net.Http.Headers;
+@using TrainTicketProjectwithBlazor.Shared.DTO;
+
+@inject HttpClient http;
+@inject IToastService toastService
+@inject NavigationManager navManager
+
+<div class="row">
+    <div class="col-12">
+        <EditForm Model="@train" OnValidSubmit="SaveAsync">
+            <h3>Create Train</h3>
+            <DataAnnotationsValidator />
+            <div class="form-group row mb-1">
+                <label for="@train.TrainName" class="col-form-label col-form-label-sm col-2 text-end">Train Name</label>
+                <div class="col-7">
+                    <InputText @bind-Value="train.TrainName" class="form-control form-control-sm" />
+                    <ValidationMessage For="@(()=> train.TrainName)" class="text-danger" />
+                </div>
+            </div>
+            <div class="form-group row mb-1">
+                <label for="@train.Category" class="col-form-label col-form-label-sm col-2 text-end">Category</label>
+                <div class="col-7">
+                    <InputSelect @bind-Value="train.Category" class="form-select form-select-sm">
+                        <option value="0">Select</option>
+                        @if (categoryNames is not null)
+                        {
+                            @for (var i = 0; i < categoryNames.Length; i++)
+                            {
+                                <option value="@categoryNames[i]">@categoryNames[i]</option>
+                            }
+                        }
+                    </InputSelect>
+                    <ValidationMessage For="@(()=> train.Category)" class="text-danger" />
+                </div>
+            </div>
+            <div class="form-group row mb-1">
+                <label for="@train.TicketPrice" class="col-form-label col-form-label-sm col-2 text-end">Ticket Price</label>
+                <div class="col-7">
+                    <input type="text" @bind="train.TicketPrice" class="form-control form-control-sm" />
+                    <ValidationMessage For="@(()=> train.TicketPrice)" class="text-danger small-text-xs"></ValidationMessage>
+                </div>
+            </div>
+            <div class="form-group row mb-1">
+                <label for="@train.Picture" class="col-form-label col-form-label-sm col-2 text-end">Picture</label>
+                <div class="col-7">
+                    
+                    <InputFile OnChange="@OnInputFileChange" class="form-control form-control-sm" />
+                    <input type="hidden" @bind="train.Picture" class="form-control form-control-sm" />
+                    <ValidationMessage For="@(()=> train.Picture)" class="text-danger" />
+                </div>
+            </div>
+            <div class="form-group row mb-1">
+                <label for="@train.IsAvailable" class="col-form-label col-form-label-sm col-2 text-end">Is Available</label>
+                <div class="col-5 pt-1">
+                    <InputCheckbox @bind-Value="@train.IsAvailable" />
+
+                </div>
+            </div>
+            <div class="form-group row mb-1">
+
+                <div class="col-4 offset-2">
+                    <button type="submit" class="btn btn-primary btn-sm">Save</button>
+                </div>
+            </div>
+        </EditForm>
+    </div>
+    <div class="col-12">
+        <a href="/Trains/List" class="btn btn-link">Back to list</a>
+    </div>
+</div>
+@code {
+    TrainDTO train = new();
+    string[]? categoryNames;
+    IBrowserFile? selectedFile;
+    string? fileSelectMessage;
+
+
+
+    protected override Task OnInitializedAsync()
+    {
+        categoryNames = Enum.GetNames(typeof(Category));
+        //this.StateHasChanged();
+        return base.OnInitializedAsync();
+    }
+
+
+    private void OnInputFileChange(InputFileChangeEventArgs e)
+    {
+        selectedFile = e.File;
+        train.Picture = e.File.Name;
+        fileSelectMessage = null;
+        //this.StateHasChanged();
+    }
+    private async Task SaveAsync()
+    {
+
+        if (train is not null)
+        {
+            toastService.ShowSuccess("Data saved successsfully", "Success");
+            var saveImage = await UploadItAsysnc();
+            train.Picture = saveImage.StoredFileName;
+            var response = await http.PostAsJsonAsync<TrainDTO>("api/Trains", train);
+            var trn = await response.Content.ReadFromJsonAsync<TrainDTO>();
+
+            navManager.NavigateTo("/Trains/List");
+        }
+
+
+    }
+    private async Task<ImageUploadResponse> UploadItAsysnc()
+    {
+        using (var ms = new MemoryStream())
+        {
+
+            if (selectedFile is not null)
+            {
+                var content = new MultipartFormDataContent();
+                var fileContent = new StreamContent(selectedFile.OpenReadStream(long.MaxValue));
+
+                fileContent.Headers.ContentType = new MediaTypeHeaderValue(selectedFile.ContentType);
+                content.Add(content: fileContent, name: "\"file\"", fileName: selectedFile.Name);
+                var response = await http.PostAsync("api/Trains/Upload", content);
+                var r = await response.Content.ReadFromJsonAsync<ImageUploadResponse>();
+                return r == null ? new ImageUploadResponse() : r;
+            }
+            else
+            {
+                return new ImageUploadResponse();
+            }
+
+        }
+    }
+
+}

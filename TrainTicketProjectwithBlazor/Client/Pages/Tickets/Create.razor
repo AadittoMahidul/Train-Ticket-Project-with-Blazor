@@ -1,0 +1,152 @@
+﻿@page "/Tickets/Create"
+@inject HttpClient http
+@inject IToastService toastService
+<div class="row">
+    <div class="col-12">
+        <EditForm Model="@ticket" OnValidSubmit="SaveTicket">
+            <h3>Create Ticket</h3>
+            <DataAnnotationsValidator />
+            <div class="form-group row mb-1">
+                <label class="col-form-label col-2 text-end" for="@ticket.PassengerId">Passenger</label>
+                <div class="col-7">
+                    <InputSelect @bind-Value="ticket.PassengerId" class="form-select">
+                        <option value="">Select</option>
+                        @if (passengers is not null)
+                        {
+                            foreach (var c in passengers)
+                            {
+                                <option value="@c.PassengerId">@c.PassengerName</option>
+                            }
+                        }
+                    </InputSelect>
+                    <ValidationMessage For="@(()=>ticket.PassengerId)" class="text-danger" />
+                </div>
+            </div>
+            <div class="form-group row mb-1">
+                <label for="@ticket.FromStation" class="col-form-label col-form-label-sm col-2 text-end">From Station</label>
+                <div class="col-7">
+                    <InputText @bind-Value="ticket.FromStation" class="form-control form-control-sm" />
+                    <ValidationMessage For="@(()=> ticket.FromStation)" class="text-danger" />
+                </div>
+            </div>
+            <div class="form-group row mb-1">
+                <label for="@ticket.ToStation" class="col-form-label col-form-label-sm col-2 text-end">To Station</label>
+                <div class="col-7">
+                    <InputText @bind-Value="ticket.ToStation" class="form-control form-control-sm" />
+                    <ValidationMessage For="@(()=> ticket.ToStation)" class="text-danger" />
+                </div>
+            </div>
+            <div class="form-group row mb-1">
+                <label class="col-form-label col-2 text-end" for="@ticket.JourneyDate">Journey Date</label>
+                <div class="col-7">
+                    <InputDate Type="InputDateType.Date" @bind-Value="@ticket.JourneyDate" class="form-control" />
+                    <ValidationMessage For="@(()=>ticket.JourneyDate)" class="text-danger" />
+                </div>
+            </div>
+            <div class="form-group row mb-1">
+                <label for="@ticket.Category" class="col-form-label col-form-label-sm col-2 text-end">Category</label>
+                <div class="col-7">
+                    <InputSelect @bind-Value="ticket.Category" class="form-select form-select-sm">
+                        <option value="0">Select</option>
+                        @if (categoryNames is not null)
+                        {
+                            @for (var i = 0; i < categoryNames.Length; ++i)
+                            {
+                                <option value="@categoryNames[i]">@categoryNames[i]</option>
+                            }
+                        }
+                    </InputSelect>
+                    <ValidationMessage For="@(()=> ticket.Category)" class="text-danger" />
+                </div>
+            </div>
+            <div class="form-group row mb-1">
+
+                <div class="col-9">
+                    <div class="d-flex justify-content-between">
+                        <h4>Items</h4> <button @onclick="@AddItem" type="button" class="btn btn-primary btn-sm m-1"><i class="bi bi-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+            @foreach (var oi in ticket.TicketItems)
+            {
+                int i = 0;
+                <div class="form-group row mb-1">
+                    <label class="col-form-label col-1 text-end" for="@ticket.PassengerId">Train</label>
+                    <div class="col-3">
+                        <InputSelect @bind-Value="oi.TrainId" class="form-select">
+                            <option value="">Select</option>
+                            @if (trains is not null)
+                            {
+                                foreach (var p in trains)
+                                {
+                                    <option value="@p.TrainId">@p.TrainName</option>
+                                }
+                            }
+                        </InputSelect>
+                        <ValidationMessage For="@(()=>oi.TrainId)" class="text-danger" />
+                    </div>
+                    <label class="col-form-label col-1 text-end" for="@oi.Quantity">Quantity</label>
+                    <div class="col-3">
+                        <InputNumber @bind-Value="oi.Quantity" class="form-control" />
+
+                        <ValidationMessage For="@(()=>oi.Quantity)" class="text-danger" />
+                    </div>
+                    <div class="col-1">
+                        <button @onclick="@(()=>RemoveItem(++i))" type="button" class="btn btn-secondary btn-sm">
+                            <i class="bi bi-trash"></i>
+                        </button>
+                    </div>
+                </div>
+            }
+            <div class="form-group row mb-1">
+
+                <div class="col-9">
+                    <div class="d-flex justify-content-end">
+                        <button type="submit" class="btn btn-primary">Save the ticket</button>
+                    </div>
+                </div>
+            </div>
+        </EditForm>
+    </div>
+    <div class="col-12">
+        <a href="/Tickets/List" class="btn btn-link">Back to list</a>
+    </div>
+</div>
+
+@code {
+    private TicketDTO ticket = new();
+    private Passenger[]? passengers;
+    private Train[]? trains;
+    private string[]? categoryNames;
+    protected override async Task OnInitializedAsync()
+    {
+        ticket.TicketItems.Add(new TicketItemDTO());
+        categoryNames = Enum.GetNames<Category>();
+        passengers = await http.GetFromJsonAsync<Passenger[]>("api/Passengers");
+        trains = await http.GetFromJsonAsync<Train[]>("api/Trains");
+    }
+    private void AddItem()
+    {
+        ticket.TicketItems.Add(new TicketItemDTO());
+    }
+    private void RemoveItem(int index)
+    {
+        if (ticket.TicketItems.Count > 1)
+            ((List<TicketItemDTO>)ticket.TicketItems).RemoveAt(index);
+    }
+    private async Task SaveTicket()
+    {
+        var response = await http.PostAsJsonAsync("api/Tickets/DTO", ticket);
+        if (response.IsSuccessStatusCode)
+        {
+            toastService.ShowSuccess("Data saved successfully", "Success");
+            ticket = new();
+            ticket.TicketItems.Add(new TicketItemDTO());
+        }
+        else
+        {
+            toastService.ShowError("Failed to data.", "Error");
+        }
+        await Task.CompletedTask;
+    }
+}

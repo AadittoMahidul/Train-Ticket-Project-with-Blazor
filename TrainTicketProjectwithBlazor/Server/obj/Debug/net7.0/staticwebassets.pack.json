@@ -1,0 +1,85 @@
+{
+  "Files": [
+    {
+      "Id": "H:\\IDB R50\\1268459\\Module 10\\18-12-22\\BlazorProject\\TrainTicketProjects\\TrainTicketProjectwithBlazor\\Server\\wwwroot\\Uploads\\1.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\1.jpg"
+    },
+    {
+      "Id": "H:\\IDB R50\\1268459\\Module 10\\18-12-22\\BlazorProject\\TrainTicketProjects\\TrainTicketProjectwithBlazor\\Server\\wwwroot\\Uploads\\1sajfrmh.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\1sajfrmh.jpg"
+    },
+    {
+      "Id": "H:\\IDB R50\\1268459\\Module 10\\18-12-22\\BlazorProject\\TrainTicketProjects\\TrainTicketProjectwithBlazor\\Server\\wwwroot\\Uploads\\2.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\2.jpg"
+    },
+    {
+      "Id": "H:\\IDB R50\\1268459\\Module 10\\18-12-22\\BlazorProject\\TrainTicketProjects\\TrainTicketProjectwithBlazor\\Server\\wwwroot\\Uploads\\2a5h3qw2.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\2a5h3qw2.jpg"
+    },
+    {
+      "Id": "H:\\IDB R50\\1268459\\Module 10\\18-12-22\\BlazorProject\\TrainTicketProjects\\TrainTicketProjectwithBlazor\\Server\\wwwroot\\Uploads\\3.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\3.jpg"
+    },
+    {
+      "Id": "H:\\IDB R50\\1268459\\Module 10\\18-12-22\\BlazorProject\\TrainTicketProjects\\TrainTicketProjectwithBlazor\\Server\\wwwroot\\Uploads\\4.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\4.jpg"
+    },
+    {
+      "Id": "H:\\IDB R50\\1268459\\Module 10\\18-12-22\\BlazorProject\\TrainTicketProjects\\TrainTicketProjectwithBlazor\\Server\\wwwroot\\Uploads\\5wsp5usc.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\5wsp5usc.jpg"
+    },
+    {
+      "Id": "H:\\IDB R50\\1268459\\Module 10\\18-12-22\\BlazorProject\\TrainTicketProjects\\TrainTicketProjectwithBlazor\\Server\\wwwroot\\Uploads\\aj300hlx.PNG",
+      "PackagePath": "staticwebassets\\Uploads\\aj300hlx.PNG"
+    },
+    {
+      "Id": "H:\\IDB R50\\1268459\\Module 10\\18-12-22\\BlazorProject\\TrainTicketProjects\\TrainTicketProjectwithBlazor\\Server\\wwwroot\\Uploads\\c314stj0.PNG",
+      "PackagePath": "staticwebassets\\Uploads\\c314stj0.PNG"
+    },
+    {
+      "Id": "H:\\IDB R50\\1268459\\Module 10\\18-12-22\\BlazorProject\\TrainTicketProjects\\TrainTicketProjectwithBlazor\\Server\\wwwroot\\Uploads\\csmnvca2.JPG",
+      "PackagePath": "staticwebassets\\Uploads\\csmnvca2.JPG"
+    },
+    {
+      "Id": "H:\\IDB R50\\1268459\\Module 10\\18-12-22\\BlazorProject\\TrainTicketProjects\\TrainTicketProjectwithBlazor\\Server\\wwwroot\\Uploads\\f13xupgo.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\f13xupgo.jpg"
+    },
+    {
+      "Id": "H:\\IDB R50\\1268459\\Module 10\\18-12-22\\BlazorProject\\TrainTicketProjects\\TrainTicketProjectwithBlazor\\Server\\wwwroot\\Uploads\\g25lrdq2.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\g25lrdq2.jpg"
+    },
+    {
+      "Id": "H:\\IDB R50\\1268459\\Module 10\\18-12-22\\BlazorProject\\TrainTicketProjects\\TrainTicketProjectwithBlazor\\Server\\wwwroot\\Uploads\\s5ezo1aa.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\s5ezo1aa.jpg"
+    },
+    {
+      "Id": "H:\\IDB R50\\1268459\\Module 10\\18-12-22\\BlazorProject\\TrainTicketProjects\\TrainTicketProjectwithBlazor\\Server\\wwwroot\\Uploads\\vkj1xtjm.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\vkj1xtjm.jpg"
+    },
+    {
+      "Id": "H:\\IDB R50\\1268459\\Module 10\\18-12-22\\BlazorProject\\TrainTicketProjects\\TrainTicketProjectwithBlazor\\Server\\wwwroot\\Uploads\\xvsivf51.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\xvsivf51.jpg"
+    },
+    {
+      "Id": "H:\\IDB R50\\1268459\\Module 10\\18-12-22\\BlazorProject\\TrainTicketProjects\\TrainTicketProjectwithBlazor\\Server\\wwwroot\\Uploads\\y11mmyja.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\y11mmyja.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.TrainTicketProjectwithBlazor.Server.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.TrainTicketProjectwithBlazor.Server.props",
+      "PackagePath": "build\\TrainTicketProjectwithBlazor.Server.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.TrainTicketProjectwithBlazor.Server.props",
+      "PackagePath": "buildMultiTargeting\\TrainTicketProjectwithBlazor.Server.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.TrainTicketProjectwithBlazor.Server.props",
+      "PackagePath": "buildTransitive\\TrainTicketProjectwithBlazor.Server.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

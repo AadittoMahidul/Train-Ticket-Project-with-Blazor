@@ -1,0 +1,68 @@
+﻿@page "/Passengers/Delete/{id:int}"
+@inject HttpClient http
+@inject IToastService toastService
+@inject NavigationManager nav
+<div class="row">
+    <div class="col-12">
+        @if (passenger is null)
+        {
+            <div>Loading...</div>
+        }
+        else
+        {
+            <EditForm Model="@passenger" OnValidSubmit="DeletePassenger">
+                <h3>Are you want to sure delete</h3>                
+                <div class="form-group row mb-1">
+                    <label class="col-form-label col-3 text-end" for="@passenger.PassengerName">Passenger name: </label>
+                    <div class="col-6">
+                        @passenger.PassengerName
+
+                    </div>
+                </div>
+                <div class="form-group row mb-1">
+                    <label class="col-form-label col-3 text-end" for="@passenger.Address">Address: </label>
+                    <div class="col-6">
+                        @passenger.Address
+
+                    </div>
+                </div>
+                <div class="form-group row mb-1">
+                    <label class="col-form-label col-3 text-end" for="@passenger.Email">Email: </label>
+                    <div class="col-6">
+                        @passenger.Email
+
+                    </div>
+                </div>
+                <div class="form-group row mb-1">
+
+                    <div class="col-4 offset-2">
+                        <button type="submit" class="btn btn-danger">Delete</button>
+
+                    </div>
+                </div>
+            </EditForm>
+        }
+    </div>
+    <div class="col-12">
+        <a href="/Passengers/List" class="btn btn-link">Back to list</a>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public int id { get; set; }
+    private Passenger? passenger = default!;
+    protected override async Task OnInitializedAsync()
+    {
+        passenger = await http.GetFromJsonAsync<Passenger>($"api/Passengers/{id}");
+    }
+    private async Task DeletePassenger()
+    {
+        var respose = await http.DeleteAsync($"api/Passengers/{id}");
+        if (respose.IsSuccessStatusCode)
+        {
+            toastService.ShowSuccess("Data deleted successsfully", "Success");
+            nav.NavigateTo("/Passengers/List");
+        }
+    }
+}
